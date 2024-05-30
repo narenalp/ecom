@@ -1,0 +1,36 @@
+version: '3.7'
+services:
+  eureka-server:
+    image: eurekaserver
+    build:
+      context: ./eureka-server
+    ports:
+      - "8761:8761"
+
+  api-gateway:
+    image: apigateway
+    build:
+      context: ./api-gateway
+    ports:
+      - "8080:8080"
+
+  auth-service:
+    image: authservice
+    build:
+      context: ./auth-service
+    ports:
+      - "8081:8081"
+
+  product-service:
+    image: productservice
+    build:
+      context: ./product-service
+    ports:
+      - "8082:8082"
+
+  order-service:
+    image: orderservice
+    build:
+      context: ./order-service
+    ports:
+      - "8083:8083"
