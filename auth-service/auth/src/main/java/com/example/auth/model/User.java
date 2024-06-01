@@ -1,5 +1,6 @@
 package com.example.auth.model;
 
+import jakarta.persistence.*;
 
 @Entity
 public class User {
@@ -11,4 +12,17 @@ public class User {
     private String role;
 
     // Getters and Setters
+    public String getUsername() {
+        return this.username;
+    }
+
+    public String getPassword() {
+        return this.password;
+    }
+
+    public void setPassword(String password) {
+
+        this.password = password;
+
+    }
 }
